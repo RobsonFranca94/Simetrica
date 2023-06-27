@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="galeria.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Galeria</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conheça nossos projetos:</h1>
+      <div class="top-content">
+        <h3>Galeria de Projetos</h3>
+        <label for="check1" id="1">Projeto 1</label>
+        <label for="check2" id="2">Projeto 2</label>
+        <label for="check3" id="3">Projeto 3</label>
+        <label for="check4" id="4">Projeto 4</label>
+      </div>
+      <div class="photo-gallery gallery">
+        <div class="pic project1">
+          <a href="Header/1.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/1.jpg">
+          </a>
+          <a href="Header/2.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/2.jpg">
+          </a>
+          <a href="Header/3.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/3.jpg">
+          </a>
+          <a href="Header/4.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/4.jpg">
+          </a>
+          <a href="Header/1.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/1.jpg">
+          </a>
+          <a href="Header/2.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/2.jpg">
+          </a>
+          <a href="Header/3.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/3.jpg">
+          </a>
+          <a href="Header/4.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/4.jpg">
+          </a>
+          
+        </div>
+        <div class="pic project2" style="display: none">
+          <a href="Header/3.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/3.jpg">
+          </a>
+          <a href="Header/2.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/2.jpg">
+          </a>
+          <a href="Header/1.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/1.jpg">
+          </a>
+          <a href="Header/4.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="Header/4.jpg">
+          </a>
+        </div>
+        <div class="pic project3" style="display: none">
+          <img src="">
+        </div>
+        <div class="pic project4" style="display: none">
+          <img src="">
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+      $("label").click(function() {
+        var id = $(this).attr("id")
+        $(".gallery").children().each(function(k, v) {
+          if ($(v).attr("class") == 'pic project' + id) {
+            $(".pic.project" + id).css("display", "block")
+          } else {
+            $(v).css("display", "none")
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
